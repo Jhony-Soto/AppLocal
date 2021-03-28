@@ -391,6 +391,7 @@ Public Class frmDashBoard
     End Sub
 
     Private Sub frmDashBoard_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
+        'String con el procedimiento almacenado
         datos = CargarDatos("sp_tbl_logeo_order_by")
         tabla = New DataTable
         tabla = datos.tables("datos")
