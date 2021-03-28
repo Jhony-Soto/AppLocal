@@ -1,0 +1,893 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FCCBD0F4-34D1-4AED-8909-88BB7AC499E4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Appsena.My.MyApplication</StartupObject>
+    <RootNamespace>Appsena</RootNamespace>
+    <AssemblyName>Appsena</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Appsena.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Appsena.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\..\Desktop\Appsena_21_de_febrero_concambios\Appsena\bin\Debug\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.19\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conexiones.vb" />
+    <Compile Include="exportar_plantilla.vb" />
+    <Compile Include="frmConfigCuenta.designer.vb">
+      <DependentUpon>frmConfigCuenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfigCuenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboard.designer.vb">
+      <DependentUpon>frmDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMora_Insert_Update.designer.vb">
+      <DependentUpon>frmMora_Insert_Update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMora_Insert_Update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientos_BuscarCliente.designer.vb">
+      <DependentUpon>frmMovimientos_BuscarCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimientos_BuscarCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientos_CambiarElemento_Cantidad.designer.vb">
+      <DependentUpon>frmMovimientos_CambiarElemento_Cantidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimientos_CambiarElemento_Cantidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientos_CambiarElemento_Codigo.designer.vb">
+      <DependentUpon>frmMovimientos_CambiarElemento_Codigo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimientos_CambiarElemento_Codigo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientos_CambioCliente.designer.vb">
+      <DependentUpon>frmMovimientos_CambioCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimientos_CambioCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientos_ClienteDetalle.designer.vb">
+      <DependentUpon>frmMovimientos_ClienteDetalle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimientos_ClienteDetalle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientos_detalle.designer.vb">
+      <DependentUpon>frmMovimientos_detalle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimientos_detalle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientos_Detalle_EntregarUno.designer.vb">
+      <DependentUpon>frmMovimientos_Detalle_EntregarUno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimientos_Detalle_EntregarUno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientos_documento.designer.vb">
+      <DependentUpon>frmMovimientos_documento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimientos_documento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientos_DuplicarMovim.designer.vb">
+      <DependentUpon>frmMovimientos_DuplicarMovim.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimientos_DuplicarMovim.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientos_DuplicarPrestamo.designer.vb">
+      <DependentUpon>frmMovimientos_DuplicarPrestamo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimientos_DuplicarPrestamo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientos_EConsumo.designer.vb">
+      <DependentUpon>frmMovimientos_EConsumo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimientos_EConsumo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientos_Historial.designer.vb">
+      <DependentUpon>frmMovimientos_Historial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimientos_Historial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientos_Historial_Detalle.designer.vb">
+      <DependentUpon>frmMovimientos_Historial_Detalle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimientos_Historial_Detalle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientos_PrestamosCliente.designer.vb">
+      <DependentUpon>frmMovimientos_PrestamosCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimientos_PrestamosCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientos_Reserva.designer.vb">
+      <DependentUpon>frmMovimientos_Reserva.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimientos_Reserva.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientos_Seguro.designer.vb">
+      <DependentUpon>frmMovimientos_Seguro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimientos_Seguro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrestamoExterno.designer.vb">
+      <DependentUpon>frmPrestamoExterno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrestamoExterno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeguros.designer.vb">
+      <DependentUpon>frmSeguros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeguros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_administradores.designer.vb">
+      <DependentUpon>frm_administradores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_administradores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_backup.designer.vb">
+      <DependentUpon>frm_backup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_backup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_bajas.designer.vb">
+      <DependentUpon>frm_bajas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_bajas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_buscar_elemento.designer.vb">
+      <DependentUpon>frm_buscar_elemento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_buscar_elemento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_calendario.designer.vb">
+      <DependentUpon>frm_calendario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_calendario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_categorias.designer.vb">
+      <DependentUpon>frm_categorias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_categorias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_categoria_reservas.designer.vb">
+      <DependentUpon>frm_categoria_reservas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_categoria_reservas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_centros.designer.vb">
+      <DependentUpon>frm_centros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_centros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_clientes.designer.vb">
+      <DependentUpon>frm_clientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_clientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_configuraciones.designer.vb">
+      <DependentUpon>frm_configuraciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_configuraciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_configuracion_inicial.designer.vb">
+      <DependentUpon>frm_configuracion_inicial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_configuracion_inicial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_detalle_historial_reserva.designer.vb">
+      <DependentUpon>frm_detalle_historial_reserva.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_detalle_historial_reserva.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_detalle_mora.designer.vb">
+      <DependentUpon>frm_detalle_mora.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_detalle_mora.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_detalle_reserva.designer.vb">
+      <DependentUpon>frm_detalle_reserva.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_detalle_reserva.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_elementos.designer.vb">
+      <DependentUpon>frm_elementos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_elementos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_fichas.designer.vb">
+      <DependentUpon>frm_fichas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_fichas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_historial_reservas.designer.vb">
+      <DependentUpon>frm_historial_reservas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_historial_reservas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_insert_update_elemento.designer.vb">
+      <DependentUpon>frm_insert_update_elemento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_insert_update_elemento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_login.designer.vb">
+      <DependentUpon>frm_login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_mora.designer.vb">
+      <DependentUpon>frm_mora.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_mora.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_progresbar.designer.vb">
+      <DependentUpon>frm_progresbar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_progresbar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_recuperar_contraseña.designer.vb">
+      <DependentUpon>frm_recuperar_contraseña.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_recuperar_contraseña.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_registrarme.designer.vb">
+      <DependentUpon>frm_registrarme.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_registrarme.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_registro_update.designer.vb">
+      <DependentUpon>frm_registro_update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_registro_update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_reservas.designer.vb">
+      <DependentUpon>frm_reservas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_reservas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_rutas.designer.vb">
+      <DependentUpon>frm_rutas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_rutas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_sincronizacion.designer.vb">
+      <DependentUpon>frm_sincronizacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_sincronizacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_tipoCliente.designer.vb">
+      <DependentUpon>frm_tipoCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_tipoCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_tipoDocumento.designer.vb">
+      <DependentUpon>frm_tipoDocumento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_tipoDocumento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_tipoElementos.designer.vb">
+      <DependentUpon>frm_tipoElementos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_tipoElementos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_tipo_prestamo.designer.vb">
+      <DependentUpon>frm_tipo_prestamo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_tipo_prestamo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Funciones.vb" />
+    <Compile Include="Importar_excel.vb" />
+    <Compile Include="MainForm.designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="WebcamForm.designer.vb">
+      <DependentUpon>WebcamForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WebcamForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmConfigCuenta.resx">
+      <DependentUpon>frmConfigCuenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashboard.resx">
+      <DependentUpon>frmDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMora_Insert_Update.resx">
+      <DependentUpon>frmMora_Insert_Update.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientos_BuscarCliente.resx">
+      <DependentUpon>frmMovimientos_BuscarCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientos_CambiarElemento_Cantidad.resx">
+      <DependentUpon>frmMovimientos_CambiarElemento_Cantidad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientos_CambiarElemento_Codigo.resx">
+      <DependentUpon>frmMovimientos_CambiarElemento_Codigo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientos_CambioCliente.resx">
+      <DependentUpon>frmMovimientos_CambioCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientos_ClienteDetalle.resx">
+      <DependentUpon>frmMovimientos_ClienteDetalle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientos_detalle.resx">
+      <DependentUpon>frmMovimientos_detalle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientos_Detalle_EntregarUno.resx">
+      <DependentUpon>frmMovimientos_Detalle_EntregarUno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientos_documento.resx">
+      <DependentUpon>frmMovimientos_documento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientos_DuplicarMovim.resx">
+      <DependentUpon>frmMovimientos_DuplicarMovim.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientos_DuplicarPrestamo.resx">
+      <DependentUpon>frmMovimientos_DuplicarPrestamo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientos_EConsumo.resx">
+      <DependentUpon>frmMovimientos_EConsumo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientos_Historial.resx">
+      <DependentUpon>frmMovimientos_Historial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientos_Historial_Detalle.resx">
+      <DependentUpon>frmMovimientos_Historial_Detalle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientos_PrestamosCliente.resx">
+      <DependentUpon>frmMovimientos_PrestamosCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientos_Reserva.resx">
+      <DependentUpon>frmMovimientos_Reserva.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientos_Seguro.resx">
+      <DependentUpon>frmMovimientos_Seguro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrestamoExterno.resx">
+      <DependentUpon>frmPrestamoExterno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeguros.resx">
+      <DependentUpon>frmSeguros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_administradores.resx">
+      <DependentUpon>frm_administradores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_backup.resx">
+      <DependentUpon>frm_backup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_bajas.resx">
+      <DependentUpon>frm_bajas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_buscar_elemento.resx">
+      <DependentUpon>frm_buscar_elemento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_calendario.resx">
+      <DependentUpon>frm_calendario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_categorias.resx">
+      <DependentUpon>frm_categorias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_categoria_reservas.resx">
+      <DependentUpon>frm_categoria_reservas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_centros.resx">
+      <DependentUpon>frm_centros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_clientes.resx">
+      <DependentUpon>frm_clientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_configuraciones.resx">
+      <DependentUpon>frm_configuraciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_configuracion_inicial.resx">
+      <DependentUpon>frm_configuracion_inicial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_detalle_historial_reserva.resx">
+      <DependentUpon>frm_detalle_historial_reserva.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_detalle_mora.resx">
+      <DependentUpon>frm_detalle_mora.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_detalle_reserva.resx">
+      <DependentUpon>frm_detalle_reserva.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_elementos.resx">
+      <DependentUpon>frm_elementos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_fichas.resx">
+      <DependentUpon>frm_fichas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_historial_reservas.resx">
+      <DependentUpon>frm_historial_reservas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_insert_update_elemento.resx">
+      <DependentUpon>frm_insert_update_elemento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_login.resx">
+      <DependentUpon>frm_login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_mora.resx">
+      <DependentUpon>frm_mora.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_progresbar.resx">
+      <DependentUpon>frm_progresbar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_recuperar_contraseña.resx">
+      <DependentUpon>frm_recuperar_contraseña.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_registrarme.resx">
+      <DependentUpon>frm_registrarme.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_registro_update.resx">
+      <DependentUpon>frm_registro_update.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_reservas.resx">
+      <DependentUpon>frm_reservas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_rutas.resx">
+      <DependentUpon>frm_rutas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_sincronizacion.resx">
+      <DependentUpon>frm_sincronizacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_tipoCliente.resx">
+      <DependentUpon>frm_tipoCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_tipoDocumento.resx">
+      <DependentUpon>frm_tipoDocumento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_tipoElementos.resx">
+      <DependentUpon>frm_tipoElementos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_tipo_prestamo.resx">
+      <DependentUpon>frm_tipo_prestamo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebcamForm.resx">
+      <DependentUpon>WebcamForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_activity_history_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_user_group_man_man_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_alarms_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_alarms_641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_basket_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_booking_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_booking_641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_bookmark_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_box_important_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_bulleted_list_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_businessman_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_calendar_30_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_camera_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_camera_blanco_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cancel_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cloud_sync_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_data_transfer_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_database_view_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_database_white_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_bin_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_bin_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_bin_322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_document_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_download_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_download_resume_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_duplicate_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_edit_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_email_send_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_error_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_exit_black_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_eye_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_gmail_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_handcart_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_increase_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_joyent_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_list_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_logout_rounded_left_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_logout_rounded_left_641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_maintenance_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_maintenance_641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_maintenance_642.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_meeting_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_microsoft_excel_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_microsoft_excel_641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_more_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_museum_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_ok_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_order_history_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_pdf_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_pencil_white_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_picture_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_protect_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_save_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_save_641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_more_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_secured_file_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_send_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_settings_balck_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_storage_box_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_trash_can_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_trolley_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_unavailable_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_update_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_update_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_update_161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_upload_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_account_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_folder_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_warning_shield_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_warning_shield_641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_writer_male_black_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_sena_blanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoSenaradial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MEDIOS copia.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\return_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_ok_green_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_opened_folder_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_file_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\microsoft_excel_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_user_male_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_raspberry_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_waiter_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_website_64.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

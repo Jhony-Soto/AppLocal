@@ -1,0 +1,9 @@
+************ CAMBIOS EN FORMULARIOS ************************
+1.frm_insert_update_elemento
+2.frm_elementos
+3.frm_configCuenta
+4.frm_registro_update
+5.frm_reserva
+6.frm_detalle_reserva
+7.frm_ficha
+8.frm_progresbar
